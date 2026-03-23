@@ -41,6 +41,21 @@ const skills = [
 
 const projects = [
   {
+    image: "/images/stroke.jpeg",
+    title: "Stroke - The Digital sketchbook",
+    desc: "An interactive AI-powered drawing platform that allows users to generate creative visuals effortlessly.Integrated AI features to enhance user experience with real-time outputs and smart interactions.Designed with a modern interface, combining creativity with technology.",
+    tech: ["GSAP", "React", "CSS modules", "Llama 3.1 8B "],
+    link: "https://stroke-app-drab.vercel.app/",
+  },
+
+  {
+    image: "/images/mizaaj.jpeg",
+    title: "Mizaaj - The food website",
+    desc: " A modern and responsive food website designed to deliver a seamless user experience.Features clean UI, smooth navigation, and an engaging layout to showcase menu and services effectively.Built with a focus on aesthetics, performance, and user interaction.",
+    tech: ["GSAP", "React"],
+    link: "https://mizaaj-restaurant.netlify.app/",
+  },
+  {
     image: "/images/p1.jpeg",
     title: "AIMailPro - Email Marketing Platform",
     desc: "Advanced email marketing automation with drag-and-drop builder, analytics dashboard.",
@@ -375,7 +390,7 @@ export default function Portfolio() {
                     whiteSpace: "nowrap",
                   }}
                 >
-                   PORTFOLIO LOADING
+                  PORTFOLIO LOADING
                 </span>
                 <div style={{ display: "flex", gap: 6 }}>
                   {[0, 1, 2].map((i) => (
@@ -773,15 +788,27 @@ export default function Portfolio() {
             </div>
 
             <div style={{ display: "flex", gap: 12 }}>
-              {[ { Icon: Github, label: "GIT", href: "https://github.com/farishay" },
-    { Icon: Linkedin, label: "IN", href: "https://www.linkedin.com/in/farwa-tariq-3b9540234/" },
-    { Icon: Mail, label: "MAIL", href: "mailto:farwa.tariq2434@gmail.com" },
-  ].map(({ Icon, label, href }, i) => (
+              {[
+                {
+                  Icon: Github,
+                  label: "GIT",
+                  href: "https://github.com/farishay",
+                },
+                {
+                  Icon: Linkedin,
+                  label: "IN",
+                  href: "https://www.linkedin.com/in/farwa-tariq-3b9540234/",
+                },
+                {
+                  Icon: Mail,
+                  label: "MAIL",
+                  href: "mailto:farwa.tariq2434@gmail.com",
+                },
+              ].map(({ Icon, label, href }, i) => (
                 <a
                   key={i}
-                   href={href}
-                        target="_blank"
-                  
+                  href={href}
+                  target="_blank"
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = "#244a0b";
                     e.currentTarget.style.background = "rgba(36,74,11,0.12)";
@@ -805,7 +832,6 @@ export default function Portfolio() {
                   }}
                 >
                   <Icon size={19} color="#244a0b" />
-                  
                 </a>
               ))}
             </div>
